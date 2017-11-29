@@ -1,0 +1,56 @@
+/*
+  Custom styles for Trackster App
+*/
+/*
+	Boostrap has default margin which was distorting 
+	the alignemtn when i was vertically aligning, so I reset
+	the margin of these elemeents.
+ */
+h1,h2,h3,h4,h5{
+	margin: 0;
+}
+
+body{
+	font-size: 16px;
+}
+
+.flex{
+	display: flex;
+	align-items: center;
+}
+
+/*
+	Header Styles
+ */
+header{
+	background-color: rgb(35,2,63);
+	padding: 20px 0;
+}
+
+header .header-logo{
+	font-family: Righteous;
+	font-size: 2.5rem;
+	color: rgb(255,0,171);
+}
+
+/*
+	Input Form Styles in the Header
+ */
+header .music-search {
+	border-radius: 25px ;
+}
+
+/*
+	Button Styles
+	I used Bootstrap deafault button and overwrote some of the default\
+	styles.
+ */
+header .btn{
+	background-color: rgb(255,0,171);
+	color: rgb(35,2,63);
+	border-radius: 23px;
+}
+
+header .btn-lg{
+	padding: 10px 25px;
+}
