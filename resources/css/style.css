@@ -4,9 +4,9 @@
 /*
 	Boostrap has default margin which was distorting 
 	the alignemtn when i was vertically aligning, so I reset
-	the margin of these elemeents.
+	the margin of the h1 element.
  */
-h1,h2,h3,h4,h5{
+h1{
 	margin: 0;
 }
 
@@ -53,4 +53,19 @@ header .btn{
 
 header .btn-lg{
 	padding: 10px 25px;
+}
+
+/*
+	Styles for the song column row
+ */
+#song-columns{
+	background-color: rgb(104, 0, 255);
+}
+
+#song-columns h5{
+	color: rgb(255,255,255);
+}
+
+#song-columns #numberSymbol{
+	margin-right: 0.625rem;
 }
