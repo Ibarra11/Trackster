@@ -7,13 +7,14 @@ var Trackster = {};
 Trackster.renderTracks = function(tracks) {
 	 for(var i = 0; i < tracks.length; i++){
 	 var mediumAlbumArt = tracks[i].image[1]["#text"];
+	 var totalListeners = numeral(tracks[i].listeners).format('0,0');
 	 var artistResults = '<div class="song-row">\
        <ul>\
       <li class="col-xs-offset-1 col-xs-1"><a href="' + tracks[i].url + '"><i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i></a></li>\
       <li class="col-xs-3">' + tracks[i].name + '</li>\
        <li class="col-xs-2">' + tracks[i].artist + '</li>\
-       <li class="col-xs-2"><img src=' + mediumAlbumArt + '/></li>\
-       <li class="col-xs-1">' + tracks[i].listeners + '</li>\
+       <li class="col-xs-2"><img src=' +  mediumAlbumArt + '/></li>\
+       <li class="col-xs-1">' + totalListeners + '</li>\
        <li class="col-xs-1"></li>\
        </ul>\
      </div>'
@@ -28,7 +29,7 @@ Trackster.renderTracks = function(tracks) {
 */
 Trackster.searchTracksByTitle = function(title) {
 	$.ajax({
-	url: "http://ws.audioscrobbler.com/2.0/?method=track.search&track=" + title + "&api_key="+ API_KEY + "&format=json",
+	url: "https://ws.audioscrobbler.com/2.0/?method=track.search&track=" + title + "&api_key="+ API_KEY + "&format=json",
 	datatype: 'jsonp',
 	success: function(data){
 		Trackster.renderTracks(data.results.trackmatches.track);
