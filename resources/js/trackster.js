@@ -46,6 +46,17 @@ $('#search-button').click(function(){
 	$('#song-list').empty();
 	Trackster.searchTracksByTitle($item);
 })
+/*
+	To detect if the user presses the enter key
+ */
+$('.music-search').keypress(function(event){
+	if(event.which == 13){
+	var $item = $('.music-search').val();
+	//This deletes the previous search results
+	$('#song-list').empty();
+	Trackster.searchTracksByTitle($item);
+	}
+})
 const API_KEY = 'c5c83bce364f8f016a2400e48b06f348';
 
 
