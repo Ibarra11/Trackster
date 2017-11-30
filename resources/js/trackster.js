@@ -5,8 +5,6 @@ var Trackster = {};
   Append each "row" to the container in the body to display all tracks. 
 */
 Trackster.renderTracks = function(tracks) {
-
-
 	 for(var i = 0; i < tracks.length; i++){
 	 var mediumAlbumArt = tracks[i].image[1]["#text"];
 	 var artistResults = '<div class="song-row">\
@@ -21,6 +19,7 @@ Trackster.renderTracks = function(tracks) {
      </div>'
      $('#song-list').append(artistResults);
 	 }
+	
 };
 
 /*
@@ -42,6 +41,8 @@ Trackster.searchTracksByTitle = function(title) {
  */
 $('#search-button').click(function(){
 	var $item = $('.music-search').val();
+	//This deletes the previous search results
+	$('#song-list').empty();
 	Trackster.searchTracksByTitle($item);
 })
 const API_KEY = 'c5c83bce364f8f016a2400e48b06f348';
