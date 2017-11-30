@@ -31,11 +31,11 @@ Trackster.searchTracksByTitle = function(title) {
 	url: "http://ws.audioscrobbler.com/2.0/?method=track.search&track=" + title + "&api_key="+ API_KEY + "&format=json",
 	datatype: 'jsonp',
 	success: function(data){
-		// Trackster.renderTracks(data.trackMatches);
 		Trackster.renderTracks(data.results.trackmatches.track);
 	}
 });
 };
+
 /*
 	Adding some interativity to the button
  */

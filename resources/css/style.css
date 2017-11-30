@@ -70,6 +70,10 @@ header .btn-lg{
 	margin-right: 1rem;
 }
 
+.row{
+	margin: 0;
+}
+
 /*Song List*/
 .song-row{
 	font-family: "Work Sans";
