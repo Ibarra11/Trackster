@@ -9,6 +9,13 @@
 h1{
 	margin: 0;
 }
+.row{
+	margin: 0;
+}
+
+ul{
+	margin-bottom: 0;
+}
 
 body{
 	font-size: 16px;
@@ -24,7 +31,7 @@ body{
  */
 header{
 	background-color: rgb(35,2,63);
-	padding: 20px 0;
+	padding: 35px 0;
 }
 
 header .header-logo{
@@ -55,6 +62,9 @@ header .btn-lg{
 	padding: 10px 25px;
 }
 
+.button-hover{
+	cursor: pointer;
+}
 /*
 	Styles for the song column row
  */
@@ -70,14 +80,10 @@ header .btn-lg{
 	margin-right: 1rem;
 }
 
-.row{
-	margin: 0;
-}
-
 /*Song List*/
 .song-row{
 	font-family: "Work Sans";
-	font-size: 1rem;
+	font-size: 1.5rem;
 	color: rgb(74,74,74);
 }
 
@@ -91,6 +97,14 @@ header .btn-lg{
 	display: flex;
 	align-items: center;
 }
+
+.song-row ul:hover{
+	 background-color: #EEF1EF;
+	 font-weight: bold;
+}
+/*.hover{
+	background-color: lightgrey;
+}*/
 #song-list ul li{
 	padding-left: 1.5rem;
 }

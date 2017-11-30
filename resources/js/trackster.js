@@ -9,8 +9,8 @@ Trackster.renderTracks = function(tracks) {
 	 var mediumAlbumArt = tracks[i].image[1]["#text"];
 	 var totalListeners = numeral(tracks[i].listeners).format('0,0');
 	 var artistResults = '<div class="song-row">\
-       <ul>\
-      <li class="col-xs-offset-1 col-xs-1"><a href="' + tracks[i].url + '"><i class="fa fa-play-circle-o fa-lg" aria-hidden="true"></i></a></li>\
+       <ul class="song-item">\
+      <li class="col-xs-offset-1 col-xs-1"><a href="' + tracks[i].url + '"><i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i></a></li>\
       <li class="col-xs-3">' + tracks[i].name + '</li>\
        <li class="col-xs-2">' + tracks[i].artist + '</li>\
        <li class="col-xs-2"><img src=' +  mediumAlbumArt + '/></li>\
@@ -59,6 +59,12 @@ $('.music-search').keypress(function(event){
 })
 const API_KEY = 'c5c83bce364f8f016a2400e48b06f348';
 
+$('.#song-list ul').hover(function(){
+	$('.song-row').toggleClass('hover');
+});
 
+$('#song-list').hover(function(){
+	$('.song-row').toggleClass('row-hover');
+});
 	
 });
