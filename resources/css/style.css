@@ -45,6 +45,16 @@ header .header-logo{
  */
 header .music-search {
 	border-radius: 25px ;
+	color: rgb(191, 191, 191);
+}
+
+header .music-search:focus{
+	color: rgb(74,74,74);
+}
+
+#search{
+	position: relative;
+	right: 1.75rem;
 }
 
 /*
@@ -53,17 +63,18 @@ header .music-search {
 	styles.
  */
 header .btn{
-	background-color: rgb(255,0,171);
+	background-color: rgb(255, 0 , 171);
 	color: rgb(35,2,63);
-	border-radius: 23px;
+	border-radius: 20px;
 }
 
 header .btn-lg{
-	padding: 10px 25px;
+	padding: 8px 30px;
 }
 
-.button-hover{
+.btn:hover{
 	cursor: pointer;
+	background-color: rgb(255,102,204);
 }
 /*
 	Styles for the song column row
@@ -76,14 +87,10 @@ header .btn-lg{
 	color: rgb(255,255,255);
 }
 
-#song-columns #numberSymbol{
-	margin-right: 1rem;
-}
-
 /*Song List*/
 .song-row{
 	font-family: "Work Sans";
-	font-size: 1.5rem;
+	font-size: 1.325rem;
 	color: rgb(74,74,74);
 }
 
@@ -92,19 +99,17 @@ header .btn-lg{
 	height: auto;
 }
 .song-row ul{
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid rgb(204, 204, 204);
 	padding: 10px 0;
 	display: flex;
 	align-items: center;
 }
 
 .song-row ul:hover{
-	 background-color: #EEF1EF;
+	 background-color: rgb(239,237,242);
 	 font-weight: bold;
 }
-/*.hover{
-	background-color: lightgrey;
-}*/
+
 #song-list ul li{
 	padding-left: 1.5rem;
 }

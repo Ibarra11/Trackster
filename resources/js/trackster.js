@@ -58,13 +58,4 @@ $('.music-search').keypress(function(event){
 	}
 })
 const API_KEY = 'c5c83bce364f8f016a2400e48b06f348';
-
-$('.#song-list ul').hover(function(){
-	$('.song-row').toggleClass('hover');
-});
-
-$('#song-list').hover(function(){
-	$('.song-row').toggleClass('row-hover');
-});
-	
 });
